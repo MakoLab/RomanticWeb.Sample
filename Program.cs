@@ -82,15 +82,16 @@ class Program
     {
         ITripleStore store = new TripleStore();
         store.LoadFromFile("input.trig");
-
         var factory = new EntityContextFactory();
 
         // it is also possible to add fluent/attribute mappings separately
         factory.WithMappings(mb => mb.FromAssemblyOf<IPerson>());
 
+        // this is necessary to tell where entities' data is stored in named graphs
         factory.WithMetaGraphUri(new Uri("http://romanticweb.net/samples"));
 
-        // this API bound to change in the future
+        // this API bound to change in the future so that custom
+        // namespaces can be added easily
         factory.WithOntology(new DefaultOntologiesProvider(BuiltInOntologies.DCTerms | BuiltInOntologies.FOAF));
 
         factory.WithDotNetRDF(store);
@@ -114,6 +115,9 @@ class Program
 }
 
 /**
+Running the program above will load `input.trig` into a memory triple store, modify some data through entities and save the modified store
+back to disk as `output.trig`.
+
 [foaf]: http://xmlns.com/foaf/spec/
 [dc]: http://purl.org/dc/terms/
 [map]: http://romanticweb.net/docs/basic-usage/mapping/
