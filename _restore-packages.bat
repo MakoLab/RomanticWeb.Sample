@@ -1,3 +1,1 @@
-cd .paket
-paket.exe restore
-cd ..
+".paket/paket.exe" restore
