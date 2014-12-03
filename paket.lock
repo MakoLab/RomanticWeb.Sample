@@ -1,0 +1,33 @@
+NUGET
+  remote: https://nuget.org/api/v2
+  specs:
+    dotNetRDF (1.0.3)
+      HtmlAgilityPack (>= 1.4.6)
+      HtmlAgilityPack (>= 1.4.6) - net35
+      HtmlAgilityPack (>= 1.4.6) - net40
+      HtmlAgilityPack (>= 1.4.6) - slv4.0
+      Newtonsoft.Json (>= 5.0.8)
+      Newtonsoft.Json (>= 5.0.8) - net35
+      Newtonsoft.Json (>= 5.0.8) - net40
+      Newtonsoft.Json (>= 5.0.8) - slv4.0
+      VDS.Common (1.2.0)
+      VDS.Common (1.2.0) - net35
+      VDS.Common (1.2.0) - net40
+      VDS.Common (1.2.0) - slv4.0
+    Fody (1.26.2)
+    HtmlAgilityPack (1.4.6)
+    Newtonsoft.Json (6.0.6)
+    NLog (3.1.0)
+    Remotion.Linq (1.15.15)
+    RomanticWeb (0.3.40)
+      NLog (>= 0)
+      Remotion.Linq (>= 0)
+      RomanticWeb.Fody (>= 0)
+    RomanticWeb.dotNetRDF (0.3.40)
+      NLog (>= 0)
+      Newtonsoft.Json (>= 6.0.0)
+      RomanticWeb (>= 0)
+      dotNetRDF (> 1.0.0 <=  1.0.3)
+    RomanticWeb.Fody (0.3.40)
+      Fody (>= 0)
+    VDS.Common (1.2.0)

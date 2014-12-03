@@ -1,0 +1,5 @@
+source https://nuget.org/api/v2
+
+nuget RomanticWeb
+nuget RomanticWeb.dotNetRDF
+nuget HtmlAgilityPack == 1.4.6

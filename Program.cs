@@ -7,6 +7,10 @@ This project is a small app, which demonstrates the use of [Romantic Web](http:/
 
 What you will read below is actual source code from the [Program.cs](http://github.com/makolab/romanticweb.sample/Program.cs) file.
 
+## Preparations
+
+NuGet packages must first be restored by running `_restore-packages.bat` before opening the solution.
+
 ## Model and mappings
 
 First, let's create some model interfaces and mappings. First we'll define a person entity, mapped with [FoaF][foaf] terms.
