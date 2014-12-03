@@ -1,0 +1,40 @@
+﻿@base <http://romantiweb.net/samples> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcelems: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://romanticweb.net/samples>
+{
+	<person/Tomasz> foaf:primaryTopic <person/Tomasz> .
+	<person/Karol> foaf:primaryTopic <person/Karol> .
+	<person/Michał> foaf:primaryTopic <person/Michał> .
+}
+
+<person/Tomasz>
+{
+	<person/Tomasz> 
+		a foaf:Person ;
+		foaf:givenName "Tomasz" ;
+		foaf:familyName "Pluskiewicz"
+}
+
+<person/Karol>
+{
+	<person/Karol> 
+		a foaf:Person ;
+		foaf:givenName "Karol" ;
+		foaf:familyName "Wojtyła" 
+}
+
+<person/Michał>
+{
+	<person/Michał> 
+		a foaf:Person ;
+		foaf:givenName "Michał" ;
+		foaf:familyName "Doe" ;
+		foaf:publications [
+			dcterms:title "Presentation about blank node - how ironic",
+			dcelems:date "2000-10-16"^^xsd:date
+		] ;
+}

@@ -88,6 +88,7 @@ class Program
         factory.WithMappings(mb => mb.FromAssemblyOf<IPerson>());
 
         // this is necessary to tell where entities' data is stored in named graphs
+        // see the input.trig file to find out how it does that
         factory.WithMetaGraphUri(new Uri("http://romanticweb.net/samples"));
 
         // this API bound to change in the future so that custom
