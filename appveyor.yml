@@ -4,4 +4,4 @@ before_build:
 configuration: Release
 
 build:
-	project: RomanticWeb.Sample.sln
+  project: RomanticWeb.Sample.sln
