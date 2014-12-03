@@ -1,4 +1,4 @@
-﻿@base <http://romantiweb.net/samples> .
+﻿@base <http://romantiweb.net/samples/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dcelems: <http://purl.org/dc/elements/1.1/> .
@@ -6,12 +6,12 @@
 
 <http://romanticweb.net/samples>
 {
-	<person/Tomasz> foaf:primaryTopic <person/Tomasz> .
-	<person/Karol> foaf:primaryTopic <person/Karol> .
-	<person/Michał> foaf:primaryTopic <person/Michał> .
+	<http://romanticweb.net/samples/Tomasz> foaf:primaryTopic <person/Tomasz> .
+	<http://romanticweb.net/samples/Karol> foaf:primaryTopic <person/Karol> .
+	<http://romanticweb.net/samples/Michał> foaf:primaryTopic <person/Michał> .
 }
 
-<http://romanticweb.net/person/Tomasz>
+<http://romanticweb.net/samples/person/Tomasz>
 {
 	<person/Tomasz> 
 		a foaf:Person ;
@@ -19,7 +19,7 @@
 		foaf:familyName "Pluskiewicz"
 }
 
-<http://romanticweb.net/person/Karol>
+<http://romanticweb.net/samples/person/Karol>
 {
 	<person/Karol> 
 		a foaf:Person ;
@@ -27,7 +27,7 @@
 		foaf:familyName "Wojtyła" 
 }
 
-<http://romanticweb.net/person/Michał>
+<http://romanticweb.net/samples/person/Michał>
 {
 	<person/Michał> 
 		a foaf:Person ;

@@ -97,19 +97,17 @@ class Program
 
         factory.WithDotNetRDF(store);
 
-        using (var context = factory.CreateContext())
+        var context = factory.CreateContext();
+        foreach (var person in context.AsQueryable<IPerson>().Where(p => p.Name != "Karol"))
         {
-            foreach (var person in context.AsQueryable<IPerson>().Where(p => p.Name == "Tim"))
-            {
-                var pub = context.Create<IPublication>("http://romanticweb.net/samples/publication/" + Guid.NewGuid());
-                pub.Title = string.Format("Publication about RDF by {0} {1}", person.Name, person.LastName);
-                pub.DatePublished = DateTime.Now;
+            var pub = context.Create<IPublication>("http://romanticweb.net/samples/publication/" + Guid.NewGuid());
+            pub.Title = string.Format("Publication about RDF by {0} {1}", person.Name, person.LastName);
+            pub.DatePublished = DateTime.Now;
 
-                person.Publications.Add(pub);
-            }
-
-            context.Commit();
+            person.Publications.Add(pub);
         }
+
+        context.Commit();
 
         store.SaveToFile("output.trig", new TriGWriter());
     }
