@@ -11,7 +11,7 @@
 	<person/Michał> foaf:primaryTopic <person/Michał> .
 }
 
-<person/Tomasz>
+<http://romanticweb.net/person/Tomasz>
 {
 	<person/Tomasz> 
 		a foaf:Person ;
@@ -19,7 +19,7 @@
 		foaf:familyName "Pluskiewicz"
 }
 
-<person/Karol>
+<http://romanticweb.net/person/Karol>
 {
 	<person/Karol> 
 		a foaf:Person ;
@@ -27,14 +27,14 @@
 		foaf:familyName "Wojtyła" 
 }
 
-<person/Michał>
+<http://romanticweb.net/person/Michał>
 {
 	<person/Michał> 
 		a foaf:Person ;
 		foaf:givenName "Michał" ;
 		foaf:familyName "Doe" ;
 		foaf:publications [
-			dcterms:title "Presentation about blank node - how ironic",
+			dcterms:title "Presentation about blank node - how ironic";
 			dcelems:date "2000-10-16"^^xsd:date
-		] ;
+		] 
 }
