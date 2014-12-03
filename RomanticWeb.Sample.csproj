@@ -54,7 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="input.trig" />
+    <None Include="input.trig">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="paket.dependencies" />
     <None Include="paket.lock" />
     <None Include="paket.references" />
