@@ -1,0 +1,7 @@
+before_build:  
+  - _restore-packages.bat
+
+configuration: Release
+
+build:
+	project: RomanticWeb.Sample.sln
