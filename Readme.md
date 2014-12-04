@@ -1,6 +1,6 @@
 ![logo](http://romanticweb.net/images/logo-small.png)
 
-# Romantic Web Sample
+# Romantic Web Sample [![Build status](https://ci.appveyor.com/api/projects/status/37vra7h9w8q8cerm/branch/master?svg=true)](https://ci.appveyor.com/project/tpluscode78631/romanticweb-sample/branch/master)
 
 This project is a small app, which demonstrates the use of [Romantic Web](http://romanticweb.net), the RDF mapper for .NET.
 
