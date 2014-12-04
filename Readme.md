@@ -4,7 +4,7 @@
 
 This project is a small app, which demonstrates the use of [Romantic Web](http://romanticweb.net), the RDF mapper for .NET.
 
-What you will read below is actual source code from the [Program.cs](http://github.com/makolab/romanticweb.sample/Program.cs) file.
+What you will read below is actual source code from the [Program.cs](https://github.com/MakoLab/RomanticWeb.Sample/blob/master/Program.cs) file.
 
 ## Preparations
 
@@ -67,7 +67,8 @@ public class PublicationMapping : EntityMap<IPublication>
     public PublicationMapping()
     {
         Property(pub => pub.Title).Term.Is("dcterms", "title");
-        Property(pub => pub.DatePublished).Term.Is(new Uri("http://purl.org/dc/elements/1.1/date"));
+        Property(pub => pub.DatePublished)
+            .Term.Is(new Uri("http://purl.org/dc/elements/1.1/date"));
     }
 }
 ```
@@ -92,15 +93,18 @@ class Program
 
         // this API bound to change in the future so that custom
         // namespaces can be added easily
-        factory.WithOntology(new DefaultOntologiesProvider(BuiltInOntologies.DCTerms | BuiltInOntologies.FOAF));
+        factory.WithOntology(new DefaultOntologiesProvider(BuiltInOntologies.DCTerms | 
+                                                           BuiltInOntologies.FOAF));
 
         factory.WithDotNetRDF(store);
 
         var context = factory.CreateContext();
         foreach (var person in context.AsQueryable<IPerson>().Where(p => p.Name != "Karol"))
         {
-            var pub = context.Create<IPublication>("http://romanticweb.net/samples/publication/" + Guid.NewGuid());
-            pub.Title = string.Format("Publication about RDF by {0} {1}", person.Name, person.LastName);
+            var pubId = "http://romanticweb.net/samples/publication/" + Guid.NewGuid();
+            var pub = context.Create<IPublication>(pubId);
+            pub.Title = string.Format("Publication about RDF by {0} {1}", 
+                                      person.Name, person.LastName);
             pub.DatePublished = DateTime.Now;
 
             person.Publications.Add(pub);
