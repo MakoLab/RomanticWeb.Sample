@@ -4,6 +4,9 @@
 @prefix dcelems: <http://purl.org/dc/elements/1.1/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+# This is the meta graph, which tells RomanticWeb in which Named Graphs
+# to look for specific resources
+# Note that by default the graph Uri is same as resource's identifier
 <http://romanticweb.net/samples>
 {
 	<http://romanticweb.net/samples/person/Tomasz> foaf:primaryTopic <person/Tomasz> .
